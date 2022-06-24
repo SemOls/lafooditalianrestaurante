@@ -1,101 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!--
-      This is the page head - it contains info the browser uses to display the page
-      You won't see what's in the head in the page
-      Scroll down to the body element for the page content
-    -->
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
-    <title>Hello World!</title>
-
-    <!-- Meta tags for SEO and social sharing -->
-    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
-    <meta
-      name="description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Hello World!" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
-    <meta
-      property="og:description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta
-      property="og:image"
-      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
-    />
-    <meta name="twitter:card" content="summary" />
-
-    <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-
-    <!-- Import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    <!--
-      This is the body of the page
-      Look at the elements and see how they appear in the rendered page on the right
-      Each element is defined using tags, with < and > indicating where each one opens and closes
-      There are elements for sections of the page, images, text, and more
-      The elements include attributes referenced in the CSS for the page style
-    -->
-
-    <!-- The wrapper and content divs set margins and positioning -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <!-- This is the start of content for our page -->
-        <h1 class="title">Hello World!</h1>
-
-        <img
-          src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <!-- Instructions on using this project -->
-        <div class="instructions">
-          <h2>
-            Using this project
-          </h2>
-          <p>
-            This is the Glitch <strong>Hello Website</strong> project. You can
-            use it to build your own site. Check out README.md in the editor for
-            more info and next steps you can take!
-          </p>
-          <!-- ADD BUTTON HERE -->
-          
-          <!-- Once you've added the button from the readme, click it in the page -->
-          <!-- Check out the function in script.js to see how it works -->
-        </div>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>ItalianRestaurante</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@1,200&family=Italianno&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <script src="https://kit.fontawesome.com/54bcb05d86.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <nav class="navbar">
+         <input type="checkbox" id="check">
+         <label for="check" class="checkbtn">
+         <i class="fas fa-bars"></i>
+         </label>
+         <label class="logox">La Food</label>
+         <ul>
+            <li><a class="activex" href="#">Home</a></li>
+            <li><a class="up" href="#about">About</a></li>
+            <li><a class="up" href="#menu">Menu</a></li>
+            <li><a class="up" href="#contactUs">Contact</a></li>
+         </ul>
+      </nav>
+      <section id="sect">
+         <div class="text">
+            <p class="head"> Welcom to The  </p>
+           <br>           
+            <p class="head"> The Finest Place for the Traditional Italian Cuisine! </p>
+         </div>
+      </section>
+      <div class="main">
+      <div class="par1">
+         <div class="button">
+            <a href="#call"><button class="btn">Book Table</button></a>
+            <a href="#menu"> <button class="btn">Order Food</button></a>  
+         </div>
       </div>
-    </div>
-    <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-      >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a>
-    </footer>
-  </body>
+      <hr>
+      <div id="about" class="par4">
+         <div class="about">
+            <h1>The LaFood Restaurant</h1>
+            <div>
+               <img class="stick" src="https://cdn.glitch.global/ce1bbffa-743a-4896-a7f7-2c736ff3a148/tripadvisor-logo-BDB616E7F6-seeklogo.com.png?v=1656086887366" alt="" width="60px" height="60px">
+               <img class="stick" src="https://cdn.glitch.global/ce1bbffa-743a-4896-a7f7-2c736ff3a148/favpng_michelin-guide-restaurant-bistro-tapas-hotel.png?v=1656086817206" alt="" width="60px" height="60px">
+               <img class="stick" src="https://cdn.glitch.global/ce1bbffa-743a-4896-a7f7-2c736ff3a148/Le_Cordon_Bleu-logo-F1B302CB5D-seeklogo.com.png?v=1656086850829" alt=""width="70px" height="60px">
+            </div>
+            <p class="publick"> The perfect place to enjoy the life & delicious food with your friends</p>
+            <p class="publick"> Our family has been in the restaurant business for a very long time. </p>
+            <p class="publick"> Nowadays we can proudly boast our reputation for a well known Italian restaurant in our area. </p>
+            <p class="publick"> We are famous for the fabulous authentic cuisine, professional chef and dedicated staff. </p>
+            <p class="publick"> Choose any dish from the menu which can help you to experience the real taste of Italia.</p>
+         </div>
+         <div>
+            <a href="#" class="to-top">Go Back</a>
+         </div>
+      </div>
+      <hr>
+      <div id="call" class="par2">
+         <div class="image"> 
+            <img src="https://cdn.glitch.global/ce1bbffa-743a-4896-a7f7-2c736ff3a148/veu.jpg?v=1656086967307" alt=""> 
+         </div>
+         <div id="call" class="form">
+            <h3>Request a Callback</h3>
+            <p class="head word">We can call  you in 30 secons, just enter your number below</p>
+            <form id="#contact-form" action="/action_page.php">
+               <label class="word" for="fname">First name:</label>
+               <br>
+               <input class="word" type="text" id="fname" name="fname" >
+               <br>
+               <label class="word" for="lname">Phone number:</label>
+               <br>
+               <input class="word" type="text" id="lname" name="lname" >
+               <br><br>
+               <a href=""><input class="btn" type="submit" value="Submit"></a>  
+            </form>
+         </div>
+      </div>
+      <hr>
+      <div id="menu" class="par3">
+         <div  class="par4">
+            <h1 >Discover Our Menu</h1>
+            <h4>
+            We cook our dishes from the freshest ingredients</h4>
+            <button class="lup"> <img src="https://cdn.glitch.global/ce1bbffa-743a-4896-a7f7-2c736ff3a148/magnifying-glass.png?v=1656087017562" alt="" width="20px" height="20px"> here </button>   
+         </div>
+         <hr>
+         <div class="ring">
+         <div class="part">
+            <div class="one">
+               <p class="names"> Appetizers</p>
+           
+                  </div>
+               
+            <div class="two">
+               <p class="names">Main Dishes</p>
+   
+            </div>
+         </div>
+         <div class="part">
+            <div class="three">
+               <p class="names"> Drinks</p>
+             
+            </div>
+            <div class="four">
+               <p class="names"> Soup</p>
+             
+            </div>
+         </div>
+         <div class="part">
+            <div class="five">
+               <p class="names"> SeaFoods</p>
+              
+            </div>
+            <div class="six">
+               <p class="names"> Cake</p>
+            
+            </div>
+         </div>
+      </div>
+
+   <div class="one1">
+      <div class="box">
+         <h2> Appetizers
+           <p> The start of any meal is so important... </p>
+             <p> So brace your appetite, while waiting for your main course. </p>
+         <p>   Our diverse and delicious appetizers will help you with that!</p> 
+         <a href=""> <button class="btn">See menu </button></a> 
+      </h2> 
+         <img src="appetizer.jpg" alt="" width="500px">
+        </div>
+        <hr>
+        <div class="box">
+         <img src="main dishes.jpg" alt="" width="500px">
+         <h2> Main Dishes
+           <p> Resto's menu knows no borders and nationalities. </p>
+             <p> At the core of our main courses roaster we have the idea of a cosmopolitan, contemporary cuisine. </p>
+         <p>  So whether you'll pick a meat, fish or vegetarian main course, be sure that it will be universally good!</p> 
+         <a href=""> <button class="btn">See menu </button></a> 
+      </h2> 
+        </div>
+<hr>
+<div class="box">
+   <h2> Drinks
+     <p> Refresh yourself while enjoying a flavorsome dinner or a lunch at our place. </p>
+       <p> We at the Resto offer different beverages as well as spirits, and liquors!</p> 
+   <a href=""> <button class="btn">See menu </button></a> 
+</h2> 
+   <img src="drinks.jpg" alt="" width="500px">
+  </div>
+<hr>
+<div class="box">
+   <img src="soup.jpg" alt="" width="500px">
+   <h2> Soups
+     <p>The start of any meal is so important... </p>
+       <p> So brace your appetite, while waiting for your main course.  </p>
+   <p>  Our diverse and delicious appetizers will help you with that!</p> 
+   <a href=""> <button class="btn">See menu </button></a> 
+</h2> 
+  </div>
+  <hr>
+  <div class="box">
+   <h2> Seafood
+     <p> The start of any meal is so important... </p>
+       <p> So brace your appetite, while waiting for your main course.  </p>
+   <p>  Our diverse and delicious appetizers will help you with that!</p> 
+   <a href=""> <button class="btn">See menu </button></a> 
+</h2> 
+<img src="seafood.jpg" alt="" width="500px">
+  </div>
+  <hr>
+  <div class="box">
+   <img src="cake.jpg" alt="" width="500px">
+   <h2> Desserts
+     <p>That sweet taste of a dessert at the end of the meal... </p>
+       <p> If you look forward to it too, than you're at the right place!  </p>
+   <p>  Our menu has prolific choice of desserts.</p> 
+   <a href=""> <button class="btn">See menu </button></a> 
+</h2> 
+  </div>
+
+   </div>
+
+         <hr>
+         <div id="contactUs">
+            <section id="contact">
+               <h1 class="section-header">Contact</h1>
+               <div class="contact-wrapper">
+                  <div class="form-horizontal">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3109.1967864237895!2d-77.04910688536661!3d38.80504405998908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b057d9df2f1b%3A0xbf1bab92e50d0392!2zMzIgUyBXYXNoaW5ndG9uIFN0LCBBbGV4YW5kcmlhLCBWQSAyMjMxNCwg0KHQqNCQ!5e0!3m2!1sru!2ses!4v1655888586409!5m2!1sru!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                  <div class="direct-contact-container">
+                     <ul class="contact-list">
+                       <a href="https://goo.gl/maps/i8syEvYqSgaynsuu5" target="_blank"> <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Alexandria, 32 Washingtorn str, 22303</span></i></li></a> 
+                        <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(555)123-4567</a></span></i></li>
+                        <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">info@demolink.org</a></span></i></li>
+                     </ul>
+                     <ul class="social-media-list">
+                        <li><a href="#" target="_blank" class="contact-icon">
+                           <i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="contact-icon">
+                           <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="contact-icon">
+                           <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                     </ul>
+                     <hr>
+                  </div>
+               </div>
+            </section>
+            <div>
+               <a href="#" class="to-top">Go Back</a>
+            </div>
+         </div>
+         <hr>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" ></script> 
+      <script src="script.js"> </script>
+   </body>
 </html>

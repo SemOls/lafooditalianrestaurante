@@ -1,184 +1,649 @@
-/******************************************************************************
-START Glitch hello-app default styles
-
-The styles in this section do some minimal CSS resets, set default fonts and 
-colors, and handle the layout for our footer and "Remix on Glitch" button. If
-you're new to CSS they may seem a little complicated, but you can scroll down
-to this section's matching END comment to see page-specific styles.
-******************************************************************************/
-
-
-/* 
-  The style rules specify elements by type and by attributes such as class and ID
-  Each section indicates an element or elements, then lists the style properties to apply
-  See if you can cross-reference the rules in this file with the elements in index.html
-*/
-
-/* Our default values set as CSS variables */
-:root {
-  --color-bg: #69F7BE;
-  --color-text-main: #000000;
-  --color-primary: #FFFF00;
-  --wrapper-height: 87vh;
-  --image-max-width: 300px;
-  --image-margin: 3rem;
-  --font-family: "HK Grotesk";
-  --font-family-header: "HK Grotesk";
-}
-
-/* Basic page style resets */
 * {
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
 }
-[hidden] {
-  display: none !important;
-}
-
-/* Import fonts */
-@font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
-}
-@font-face {
-  font-family: HK Grotesk;
-  font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-    format("opentype");
-}
-
-/* Our remix on glitch button */
-.btn--remix {
-  font-family: HK Grotesk;
-  padding: 0.75rem 1rem;
-  font-size: 1.1rem;
-  line-height: 1rem;
-  font-weight: 500;
-  height: 2.75rem;
-  align-items: center;
-  cursor: pointer;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #000;
-  white-space: nowrap;
-  margin-left: auto;
-}
-.btn--remix img {
-  margin-right: 0.5rem;
-}
-.btn--remix:hover {
-  background-color: #D0FFF1;
-}
-
-/* Navigation grid */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem auto 0;
-  padding: 1rem 0 0.75rem 0;
-  width: 100%;
-  flex-wrap: wrap;
-  border-top: 4px solid #fff;
-}
-
-.footer a:not(.btn--remix):link,
-a:not(.btn--remix):visited {
-  font-family: HK Grotesk;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.1rem;
-  color: #000;
-  text-decoration: none;
-  border-style: none;
-}
-.footer a:hover {
-  background: var(--color-primary);
-}
-
-.footer .links {
-  padding: 0.5rem 1rem 1.5rem;
-  white-space: nowrap;
-}
-
-.divider {
-  padding: 0 1rem;
-}
-/******************************************************************************
-END Glitch hello-app default styles
-******************************************************************************/
 
 body {
-  font-family: HK Grotesk;
-  background-color: var(--color-bg);
+	font-family: 'Italianno', cursive;
 }
 
-/* Page structure */
-.wrapper {
-  min-height: var(--wrapper-height);
-  display: grid;
-  place-items: center;
-  margin: 0 1rem;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+nav {
+	background: rgb(75, 222, 75)6;
+	height: 80px;
+	width: 100%;
 }
 
-/* Very light scaling for our illustration */
-.title {
-  color: #2800FF;
-  font-family: HK Grotesk;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 100px;
-  line-height: 105%;
-  margin: 0;
+label.logox {
+	color: white;
+	font-size: 40px;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;
 }
 
-/* Very light scaling for our illustration */
-.illustration {
-  max-width: 100%;
-  max-height: var(--image-max-width);
-  margin-top: var(--image-margin);
+nav ul {
+	float: right;
+	margin-right: 20px;
 }
 
-/* Instructions */
-.instructions {
-  margin: 1rem auto 0;
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
 }
 
-/* Button - Add it from the README instructions */
-button,
-input {
-  font-family: inherit;
-  font-size: 100%;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  transition: 500ms;
+nav ul li a {
+	color: white;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
 }
 
-/* Subheading */
+a.activex,
+.up:hover {
+	background: rgb(75, 222, 75);
+	transition: .5s;
+}
+
+.checkbtn {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+@media (max-width: 952px) {
+	.checkbtn {
+		display: block;
+	}
+
+	label.logox {
+		font-size: 30px;
+		padding-left: 50px;
+	}
+
+	nav ul li a {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 858px) {
+	.checkbtn {
+		display: block;
+	}
+
+	ul {
+		position: fixed;
+		width: 100%;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+		color:rgb(75, 222, 75) ;
+		font-size: bold;
+	}
+	nav ul li {
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+
+	nav ul li a {
+		font-size: 20px;
+		font-size: bold;
+	}
+
+	a:hover,
+	a.activex {
+		background: none;
+		color: rgb(75, 222, 75)6;
+	}
+
+	#check:checked~ul {
+		left: 0;
+	}
+}
+
+#sect {
+	background: url("https://cdn.glitch.global/ce1bbffa-743a-4896-a7f7-2c736ff3a148/fon.jpg?v=1656086727976") no-repeat;
+	background-size: cover;
+	height: calc(100vh - 80px);
+	z-index: -1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+#contactUs {
+	margin: 0;
+	padding: 0;
+	background-color: antiquewhite;
+	padding-bottom: 100px;
+}
+
+#contact {
+	width: 100%;
+	height: 100%;
+}
+
+.section-header {
+	text-align: center;
+	margin: 0 auto;
+	padding: 40px 0;
+	font: 300 60px 'Oswald', sans-serif;
+	color: #282828;
+
+}
+
+.contact-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 20px;
+	position: relative;
+	flex-wrap: wrap;
+}
+
+/* Left contact page */
+.form-horizontal {
+	/*float: left;*/
+	max-width: 400px;
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+	max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+	list-style-type: none;
+	margin-left: -30px;
+	padding-right: 20px;
+}
+
+.list-item {
+	line-height: 4;
+	color: #aaa;
+}
+
+.contact-text {
+	font: 300 18px 'Lato', sans-serif;
+	letter-spacing: 1.9px;
+	color: #bbb;
+}
+
+.place {
+	margin-left: 20px;
+}
+
+.phone {
+	margin-left: 20px;
+}
+
+.gmail {
+	margin-left: 20px;
+}
+
+.contact-text a {
+	color: #bbb;
+	text-decoration: none;
+	transition-duration: 0.2s;
+	font-size: 25px;
+}
+
+.contact-text a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+	position: relative;
+	font-size: 22px;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.social-media-list li a {
+	color: #fff;
+}
+
+.social-media-list li {
+	position: relative;
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	margin: 10px 3px;
+	line-height: 60px;
+	border-radius: 50%;
+	color: #fff;
+	background-color: rgb(27, 27, 27);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 50%;
+	opacity: 0;
+	box-shadow: 0 0 0 1px #fff;
+	transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+	background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+	opacity: 1;
+	transform: scale(1.12);
+	transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+	color: #000;
+}
+
+hr {
+	border-color: rgba(255, 255, 255, .6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+	.contact-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.direct-contact-container,
+	.form-horizontal {
+		margin: 0 auto;
+	}
+
+	.direct-contact-container {
+		margin-top: 60px;
+		max-width: 300px;
+	}
+
+	.social-media-list li {
+		height: 60px;
+		width: 60px;
+		line-height: 60px;
+	}
+
+	.social-media-list li:after {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+	}
+}
+
+@media screen and (max-width: 569px) {
+
+	.direct-contact-container,
+	.form-wrapper {
+		float: none;
+		margin: 0 auto;
+	}
+
+	.form-control,
+	textarea {
+
+		margin: 0 auto;
+	}
+
+
+	.name,
+	.email,
+	textarea {
+		width: 280px;
+	}
+
+	.direct-contact-container {
+		margin-top: 60px;
+		max-width: 280px;
+	}
+
+	.social-media-list {
+		left: 0;
+	}
+
+	.social-media-list li {
+		height: 55px;
+		width: 55px;
+		line-height: 55px;
+		font-size: 2rem;
+	}
+
+	.social-media-list li:after {
+		width: 55px;
+		height: 55px;
+		line-height: 55px;
+	}
+
+}
+
+@media screen and (max-width: 410px) {
+	.send-button {
+		width: 99%;
+	}
+}
+
+
+body {
+	background-color: #000000;
+}
+
+.moto-content-image {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+
+.par1 {
+	flex-wrap: wrap;
+}
+
+.par2 {
+	display: flex;
+	flex-direction: row;
+
+}
+
+.par4 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: antiquewhite;
+	color: #282828;
+	font-size: x-large;
+	padding: 20px;
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	margin: 20px;
+	padding: 20px;
+	
+}
+.publick {
+	color: #282828;
+}
+
+h1,
+h4 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h3 {
+	font-family: 'Italianno', cursive;
+	font-weight: bolder;
+	font-size: 40px;
+	color: rgb(75, 222, 75);
+}
 h2 {
-  color: #2800FF;
+	font-family: 'Italianno', cursive;
+	font-weight: bolder;
+	font-size: 27px;
+	color: #282828;
+}
+.image {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	height: 100%;
 }
 
-/* Interactive image */
-.illustration:active {
-  transform: translateY(5px);
+.par3 {
+	display: flex;
+	flex-direction: column;
 }
 
-/* Button dip
-- Toggling this class on and off will move it down and up again
-- The button transition property above determines the speed of the translate (500ms)
-*/
-.dipped {
-  transform: translateY(5px);
+.form {
+	margin: 50px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	border: #282828 solid 2px;
 }
+
+.head {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	color: white;
+	font-family: 'Italianno', cursive;
+}
+
+
+
+.text {
+	margin-top: 200px;
+	display: flex;
+  justify-content: center;
+	flex-direction: column;
+	font-family: 'Italianno', cursive;
+	font-weight: bolder;
+	font-size: 60px;
+  }
+
+.word {
+	font-family: 'Italianno', cursive;
+	font-weight: bolder;
+	font-size: 30px;
+	color: #282828;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+
+.btn {
+	background: rgb(75, 222, 75);
+	border-radius: 40px;
+	margin: 15px;
+	padding: 10px;
+	font-family: 'Glory', sans-serif;
+	font-size: 15px;
+	color: aliceblue;
+	border: none;
+	text-decoration: none;
+}
+.lup {
+background: none;
+border: none;
+color: rgb(75, 222, 75);
+}
+.part {
+	display: flex;
+}
+.one1 {
+	display: flex;
+	display: none;
+	flex-wrap: wrap;
+}
+.box {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	flex-wrap: wrap;
+	background: antiquewhite;
+	color: #282828;
+}
+
+.names {
+	display: flex;
+	justify-content: center;
+	font-size: 60px;
+	align-items: center;
+	color: azure;
+
+}
+
+.one {
+	background-image: url("appetizer.jpg");
+    width: 100%;
+	height: 300px;
+	background-size: cover;
+	height: calc(100vh - 80px);
+	z-index: -1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.two {
+	background-image: url("main dishes.jpg");
+	width: 100%;
+	height: 300px;
+	background-size: cover;
+	height: calc(100vh - 80px);
+	z-index: -1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.three {
+	background-image: url("drinks.jpg");
+	width: 100%;
+	height: 300px;
+	background-size: cover;
+	height: calc(100vh - 80px);
+	z-index: -1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.four {
+	background-image: url("soup.jpg");
+	width: 100%;
+	height: 300px;
+	background-size: cover;
+	height: calc(100vh - 80px);
+	z-index: -1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.five {
+	background-image: url("seafood.jpg");
+	width: 100%;
+	height: 300px;
+	background-size: cover;
+	height: calc(100vh - 80px);
+	z-index: -1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.six {
+	background-image: url("cake.jpg");
+	width: 100%;
+	height: 300px;
+	background-size: cover;
+	height: calc(100vh - 80px);
+	z-index: -1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@media (max-width: 767px) {
+
+	.par2,
+	.par3,
+	.part
+	.par4 {
+		flex-wrap: wrap;
+	}
+
+	.text {
+		font-weight: bold;
+		font-size: 30px;
+	}
+}
+
+
+.to-top {
+	color: #282828;
+	;
+	padding-top: 1.8em;
+	display: inline-block;
+	/* or block */
+	position: relative;
+	border-color: #282828;
+	text-decoration: none;
+	transition: all .3s ease-out;
+
+}
+
+.to-top:before {
+	content: '▲';
+	font-size: .9em;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -.7em;
+	border: solid .13em white;
+	border-radius: 10em;
+	width: 1.4em;
+	height: 1.4em;
+	line-height: 1.3em;
+	border-color: inherit;
+	transition: transform .5s ease-in;
+}
+
+.to-top:hover {
+	color: rgb(75, 222, 75);
+	border-color: rgb(75, 222, 75);
+}
+
+.to-top:hover:before {
+	transform: rotate(360deg);
+}
+

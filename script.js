@@ -1,27 +1,21 @@
-/*
-This is your site JavaScript code - you can add interactivity and carry out processing
-- Initially the JS writes a message to the console, and moves a button you can add from the README
-*/
+gsap.from(".head", {y:30, opacity:0, duration:2, delay:1, stagger:.6})
+  gsap.from(".btn", {y:30, opacity:0, duration:3, delay:3})
+  gsap.from(".stick", {y:30, opacity:0, duration:2, delay:1, stagger:.6})
+  gsap.from(".publick", {opacity:0, duration:3, delay:6, stagger:.8})
+  gsap.to("h1", {scale:1.2, duration:3, delay:5})
+  gsap.from(".form", {opacity:0, duration:3, delay:9})
+  gsap.to(".lup", {scale:1.2, duration:3, delay:5})
+  
+  const one=document.querySelector(".ring")
+  const one1=document.querySelector(".one1")
+  const lup= document.querySelector(".lup");
 
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Hello 🌎");
+  lup.addEventListener("click", startAmimat )
 
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the "Next steps" in the README
-*/
-const btn = document.querySelector("button"); // Get the button from the page
-// Detect clicks on the button
-if (btn) {
-  btn.onclick = function() {
-    // The JS works in conjunction with the 'dipped' code in style.css
-    btn.classList.toggle("dipped");
-  };
-}
+  function startAmimat() {
 
-// This is a single line JS comment
-/*
-This is a comment that can span multiple lines 
-- use comments to make your own notes!
-*/
+    one.style="display:none";
+    one1.style="display:block";
+  }
+
+ 
