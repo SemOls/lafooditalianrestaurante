@@ -78,14 +78,14 @@ a.activex,
 	}
 }
 
-@media (max-width: 858px) {
+@media (max-width: 850px) {
 	.checkbtn {
 		display: block;
 	}
 
 	ul {
 		position: fixed;
-		width: 100%;
+/* 		width: 100%; */
 		top: 80px;
 		left: -100%;
 		text-align: center;
